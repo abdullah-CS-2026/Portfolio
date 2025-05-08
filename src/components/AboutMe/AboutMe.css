@@ -1,0 +1,51 @@
+.about-section {
+    background-color: #0d0220;
+    color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .section-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+
+  
+  .subtitle {
+    color: #8bb4ff;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .about-text {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  .about-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .download-btn {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+  }
+  
+  .download-btn:hover {
+    background-color: #ffffff;
+    color: #2e2e38;
+  }
+  

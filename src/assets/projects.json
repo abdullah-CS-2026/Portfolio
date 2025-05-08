@@ -1,0 +1,21 @@
+[
+    {
+      "id": 1,
+      "title": "Quiz App",
+      "technology": "React.js",
+      "description": "A quiz application with 10 multiple choice questions. Users receive immediate feedback upon selecting an answer, and the quiz resets after submission."
+    },
+    {
+      "id": 2,
+      "title": "Tic Tac Toe Game",
+      "technology": "React.js",
+      "description": "A classic Tic Tac Toe game. When a player wins, a congratulations message is shown and the game resets automatically."
+    },
+    {
+      "id": 3,
+      "title": "Parking System",
+      "technology": "C++",
+      "description": "A parking management system with fixed pricing for motorcycles, cars, and trucks. Parking spots become available again automatically when a vehicle leaves."
+    }
+  ]
+  
