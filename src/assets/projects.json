@@ -25,7 +25,14 @@
       "technology": "C++",
       "description": "A parking management system with fixed pricing for motorcycles, cars, and trucks. Parking spots become available again automatically when a vehicle leaves.",
       "github": "https://github.com/abdullah-CS-2026/Parking_Project-C-"
-    }
+    },
+    {
+  "id": 5,
+  "title": "Blood Donor System",
+  "technology": "HTML, CSS, Firebase, Node.js",
+  "description": "A web-based Blood Donor Management System that connects blood donors with patients in need. It allows users to register as donors, search for available blood groups, and manage donation records in real time using Firebase authentication and database.",
+  "github": "https://github.com/abdullah-CS-2026/blood-donor-system"
+}
   
   ]
   
