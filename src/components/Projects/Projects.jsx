@@ -37,10 +37,17 @@ export const Projects = () => {
             <h3>{project.title}</h3>
             <p className="tech">{project.technology}</p>
             <p className="desc">{project.description}</p>
-            <a target="_blank" className="github-button">
-              <AiFillGithub size={20} />
-              <span>GitHub</span>
-            </a>
+            {project.github && (
+  <a
+    href={project.github}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="github-button"
+  >
+    <AiFillGithub size={20} />
+    <span>GitHub</span>
+  </a>
+)}
           </div>
         ))}
       </div>

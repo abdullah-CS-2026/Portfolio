@@ -26,9 +26,11 @@ export const HeroSection = () => {
         </div>
 
         <div className="resume-btn">
-          <button className="cta-button">
-            my resume <FontAwesomeIcon icon={faDownload} />
-          </button>
+            <a href="/Muhammad_Abdullah.pdf" download>
+    <button className="cta-button">
+      my resume <FontAwesomeIcon icon={faDownload} />
+    </button>
+  </a>
         </div>
 
          </div>

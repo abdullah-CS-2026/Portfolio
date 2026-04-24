@@ -1,21 +1,31 @@
 [
-    {
-      "id": 1,
-      "title": "Quiz App",
-      "technology": "React.js",
-      "description": "A quiz application with 10 multiple choice questions. Users receive immediate feedback upon selecting an answer, and the quiz resets after submission."
-    },
+     {
+    "id": 1,
+    "title": "AI Powered Contractor-Customer Bidding Platform",
+    "technology": "MERN Stack + AI",
+    "description": "An AI-powered contractor-customer bidding platform where customers can post projects and contractors can submit proposals. The system includes AI assistance to generate 2D floor plan models for customers, helping visualize construction and renovation designs before execution.",
+    "github":"https://github.com/abdullah-CS-2026/Final_Year_Project"
+  },
     {
       "id": 2,
+      "title": "Quiz App",
+      "technology": "React.js",
+      "description": "A quiz application with 10 multiple choice questions. Users receive immediate feedback upon selecting an answer, and the quiz resets after submission.",
+      "github": "https://github.com/abdullah-CS-2026/Quiz-App-"
+    },
+    {
+      "id": 3,
       "title": "Tic Tac Toe Game",
       "technology": "React.js",
       "description": "A classic Tic Tac Toe game. When a player wins, a congratulations message is shown and the game resets automatically."
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "Parking System",
       "technology": "C++",
-      "description": "A parking management system with fixed pricing for motorcycles, cars, and trucks. Parking spots become available again automatically when a vehicle leaves."
+      "description": "A parking management system with fixed pricing for motorcycles, cars, and trucks. Parking spots become available again automatically when a vehicle leaves.",
+      "github": "https://github.com/abdullah-CS-2026/Parking_Project-C-"
     }
+  
   ]
   
