@@ -11,10 +11,10 @@ export function AboutMe() {
         Professional Web Developer Having 1 Years Of Experience
       </h3>
       <p className="about-text">
-        I am a passionate Web Developer with strong expertise in HTML, CSS, and React.js. I specialize in building responsive and interactive user interfaces that deliver seamless user experiences. With a solid foundation in modern web technologies, I focus on clean code, component-based design, and performance optimization.
+        I am a passionate MERN Stack Developer with strong expertise in MongoDB, Express.js, React.js, and Node.js. I specialize in building full-stack web applications with responsive and interactive user interfaces that deliver seamless user experiences. With a solid foundation in modern web technologies, I focus on clean code, scalable architecture, and performance optimization.
       </p>
       <p className="about-text">
-      Whether it's crafting pixel-perfect layouts or integrating dynamic functionality, I take pride in delivering high-quality front-end solutions.
+      Whether it's designing efficient backend APIs or creating pixel-perfect front-end interfaces, I take pride in delivering high-quality full-stack solutions that combine robust server-side logic with engaging user experiences.
       </p>
 
       <div className="about-details">

@@ -2,7 +2,8 @@ import React from 'react'
 import './header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
-export const Header = ()=> {
+
+export const Header = ({ onContactClick })=> {
   return (
     <>
     <nav className="navbar">
@@ -14,7 +15,7 @@ export const Header = ()=> {
         <li><a href="#Work">My Work</a></li>
         <li><a href="#Contact">Get In Touch</a></li>
       </ul>
-      <button className="contact-button">Contact <FontAwesomeIcon icon={faArrowRight}/> </button>
+      <button className="contact-button" onClick={onContactClick}>Contact <FontAwesomeIcon icon={faArrowRight}/> </button>
     </nav>
       </>
   )
