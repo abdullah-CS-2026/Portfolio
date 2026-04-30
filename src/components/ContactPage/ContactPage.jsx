@@ -3,6 +3,7 @@ import './ContactPage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faPhone, faMapMarkerAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedinIn, faGithubAlt, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { LoadingSpinner } from '../LoadingSpinner/LoadingSpinner';
 
 export const ContactPage = ({ onBackClick }) => {
   const [formData, setFormData] = useState({
@@ -13,17 +14,35 @@ export const ContactPage = ({ onBackClick }) => {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    setError('');
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form Data:', formData);
-    setSubmitted(true);
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    setTimeout(() => setSubmitted(false), 4000);
+    setLoading(true);
+    setError('');
+    
+    try {
+      // Simulate API call - replace with your actual backend endpoint
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
+      console.log('Form Data:', formData);
+      setSubmitted(true);
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      
+      // Reset success message after 4 seconds
+      setTimeout(() => setSubmitted(false), 4000);
+    } catch (err) {
+      setError('Failed to send message. Please try again.');
+      console.error('Error:', err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -77,55 +96,69 @@ export const ContactPage = ({ onBackClick }) => {
               ✓ Thank you! Your message has been sent successfully.
             </div>
           )}
-
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <div className="form-group">
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
+          
+          {error && (
+            <div className="error-message">
+              ✗ {error}
             </div>
+          )}
 
-            <div className="form-group">
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-            </div>
+          {loading ? (
+            <LoadingSpinner message="Sending your message..." />
+          ) : (
+            <form className="contact-form" onSubmit={handleSubmit}>
+              <div className="form-group">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  disabled={loading}
+                />
+              </div>
 
-            <div className="form-group">
-              <input
-                type="text"
-                name="subject"
-                placeholder="Subject"
-                value={formData.subject}
-                onChange={handleChange}
-                required
-              />
-            </div>
+              <div className="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  disabled={loading}
+                />
+              </div>
 
-            <div className="form-group">
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-              ></textarea>
-            </div>
+              <div className="form-group">
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
+                  disabled={loading}
+                />
+              </div>
 
-            <button type="submit" className="submit-button">
-              Send Message <FontAwesomeIcon icon={faArrowRight} />
-            </button>
-          </form>
+              <div className="form-group">
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  disabled={loading}
+                ></textarea>
+              </div>
+
+              <button type="submit" className="submit-button" disabled={loading}>
+                {loading ? 'Sending...' : <>Send Message <FontAwesomeIcon icon={faArrowRight} /></>}
+              </button>
+            </form>
+          )}
         </div>
       </div>
 

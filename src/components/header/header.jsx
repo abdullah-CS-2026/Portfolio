@@ -2,6 +2,7 @@ import React from 'react'
 import './header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { ThemeToggle } from '../ThemeToggle/ThemeToggle'
 
 export const Header = ({ onContactClick })=> {
   return (
@@ -15,7 +16,10 @@ export const Header = ({ onContactClick })=> {
         <li><a href="#Work">My Work</a></li>
         <li><a href="#Contact">Get In Touch</a></li>
       </ul>
-      <button className="contact-button" onClick={onContactClick}>Contact <FontAwesomeIcon icon={faArrowRight}/> </button>
+      <div className="header-actions">
+        <ThemeToggle />
+        <button className="contact-button" onClick={onContactClick}>Contact <FontAwesomeIcon icon={faArrowRight}/> </button>
+      </div>
     </nav>
       </>
   )

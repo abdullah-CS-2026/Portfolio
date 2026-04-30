@@ -36,6 +36,13 @@
     text-decoration: none;
     color: white;
   }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
   .contact-button {
     background: transparent;
     border: 1px solid #fff;
@@ -49,5 +56,33 @@
   .contact-button:hover {
     background-color: #fff;
     color: #0a0218;
+  }
+
+  @media (max-width: 1024px) {
+    .navbar {
+      padding: 10px 20px;
+    }
+
+    .nav-links {
+      gap: 20px;
+      padding: 10px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 10px 15px;
+    }
+
+    .nav-links {
+      gap: 10px;
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+
+    .contact-button {
+      padding: 6px 12px;
+      font-size: 0.9rem;
+    }
   }
   
