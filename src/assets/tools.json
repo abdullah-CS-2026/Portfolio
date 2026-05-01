@@ -1,0 +1,52 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Development Tools",
+      "tools": [
+        {
+          "id": "git",
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "id": "github",
+          "name": "GitHub",
+          "icon": "github"
+        },
+        {
+          "id": "vscode",
+          "name": "VS Code",
+          "icon": "code"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "API Testing Tools",
+      "tools": [
+        {
+          "id": "postman",
+          "name": "Postman",
+          "icon": "send"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Testing Tools",
+      "tools": [
+        {
+          "id": "playwright",
+          "name": "Playwright",
+          "icon": "check-circle"
+        },
+        {
+          "id": "testrail",
+          "name": "TestRail",
+          "icon": "list-checks"
+        }
+      ]
+    }
+  ]
+}

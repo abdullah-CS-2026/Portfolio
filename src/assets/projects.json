@@ -4,34 +4,39 @@
     "title": "AI Powered Contractor-Customer Bidding Platform",
     "technology": "MERN Stack + AI",
     "description": "An AI-powered contractor-customer bidding platform where customers can post projects and contractors can submit proposals. The system includes AI assistance to generate 2D floor plan models for customers, helping visualize construction and renovation designs before execution.",
-    "github":"https://github.com/abdullah-CS-2026/Final_Year_Project"
+    "github":"https://github.com/abdullah-CS-2026/Final_Year_Project",
+    "toolsUsed": ["Git", "GitHub", "VS Code", "Postman", "Playwright"]
   },
     {
       "id": 2,
       "title": "Quiz App",
       "technology": "React.js",
       "description": "A quiz application with 10 multiple choice questions. Users receive immediate feedback upon selecting an answer, and the quiz resets after submission.",
-      "github": "https://github.com/abdullah-CS-2026/Quiz-App-"
+      "github": "https://github.com/abdullah-CS-2026/Quiz-App-",
+      "toolsUsed": ["Git", "GitHub", "VS Code"]
     },
     {
       "id": 3,
       "title": "Tic Tac Toe Game",
       "technology": "React.js",
-      "description": "A classic Tic Tac Toe game. When a player wins, a congratulations message is shown and the game resets automatically."
+      "description": "A classic Tic Tac Toe game. When a player wins, a congratulations message is shown and the game resets automatically.",
+      "toolsUsed": ["Git", "GitHub", "VS Code"]
     },
     {
       "id": 4,
       "title": "Parking System",
       "technology": "C++",
       "description": "A parking management system with fixed pricing for motorcycles, cars, and trucks. Parking spots become available again automatically when a vehicle leaves.",
-      "github": "https://github.com/abdullah-CS-2026/Parking_Project-C-"
+      "github": "https://github.com/abdullah-CS-2026/Parking_Project-C-",
+      "toolsUsed": ["Git", "GitHub", "VS Code", "TestRail"]
     },
     {
   "id": 5,
   "title": "Blood Donor System",
   "technology": "HTML, CSS, Firebase, Node.js",
   "description": "A web-based Blood Donor Management System that connects blood donors with patients in need. It allows users to register as donors, search for available blood groups, and manage donation records in real time using Firebase authentication and database.",
-  "github": "https://github.com/abdullah-CS-2026/blood-donor-system"
+  "github": "https://github.com/abdullah-CS-2026/blood-donor-system",
+  "toolsUsed": ["Git", "GitHub", "VS Code", "Postman"]
 }
   
   ]
