@@ -1,112 +1,92 @@
+/* SECTION */
 .skills-experience-container {
-  font-family: 'Arial', sans-serif;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 20px;
-  background-color: transparent;
-  color: white; /* White text */
-}
-
-.skills-experience-container h2 {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0a0218 0%, #1a0033 50%, #0d0a1f 100%);
   text-align: center;
+}
+
+/* TITLE */
+.skills-title {
+  font-size: 3rem;
+  font-weight: 700;
   margin-bottom: 50px;
-  font-size: 2.5rem;
-  color: #ffffff;
+  color: white;
 }
 
-.content-grid {
-  display: flex;
-  gap: 80px;
-}
-.skills-section {
-  flex: 1;
-}
-
-.skills-section h3 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  color: #4fc3f7;
-}
-
+/* GRID */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns */
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.skill-item {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 12px;
-  border-radius: 6px;
-  text-align: center;
-  font-size: 1rem;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-}
+/* CARD */
+.skill-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.02)
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 20px;
 
-.skill-item:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
-}
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  .skills-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
-  }
-}
-
-@media (max-width: 768px) {
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
-  }
-}
-
-
-.experience-section {
-  flex: 1;
-}
-
-.year-group {
-  margin-bottom: 30px;
-}
-
-.year {
-  font-weight: bold;
-  font-size: 1.3rem;
-  margin-bottom: 15px;
-  color: #4fc3f7; /* Light blue for years */
-}
-
-.experience-item {
-  background-color: #1e1e1e;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-}
-
-.position {
-  font-weight: 600;
-  font-size: 1.1rem;
-  margin-bottom: 5px;
-}
-
-.company {
-  color: #aaaaaa;
+  color: white;
   font-size: 0.95rem;
+  font-weight: 500;
+
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Responsive design */
+/* SHIMMER EFFECT (same as project cards) */
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  transition: 0.5s;
+}
+
+.skill-card:hover::before {
+  left: 100%;
+}
+
+/* HOVER */
+.skill-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(124, 58, 237, 0.2);
+  border-color: rgba(124, 58, 237, 0.4);
+}
+
+/* ICON */
+.skill-icon {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+/* TEXT */
+.skill-card span {
+  margin-top: 5px;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .content-grid {
-    flex-direction: column;
-    gap: 40px;
-  }
-  
-  .skills-list li {
-    padding: 10px 0;
-  }
-  
-  .experience-item {
-    padding: 12px;
+  .skills-title {
+    font-size: 2rem;
   }
 }
