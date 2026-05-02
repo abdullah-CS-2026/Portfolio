@@ -8,7 +8,6 @@ import { Header } from "./components/header/header"
 import { HeroSection } from "./components/HeroSection/heroSection"
 import { Projects } from "./components/Projects/Projects"
 import { SkillsExperience } from "./components/SkillsExperience/SkillsExperience"
-import { ToolsAndTechnologies } from "./components/ToolsAndTechnologies/ToolsAndTechnologies"
 import { ContactPage } from "./components/ContactPage/ContactPage"
 import { NotFound } from "./components/NotFound/NotFound"
 import { ErrorBoundary } from "./components/ErrorBoundary/ErrorBoundary"
@@ -22,7 +21,7 @@ function HomePage({ onContactClick }) {
       <AboutMe/>
       <SkillsExperience/>
       <Projects/>
-      <ToolsAndTechnologies/>
+      
       <ContactForm/>
       <Footer/>
     </>
