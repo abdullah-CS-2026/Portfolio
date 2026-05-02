@@ -1,12 +1,12 @@
-/* SECTION BACKGROUND */
+/* ================= SECTION BACKGROUND ================= */
 .about-section {
-  padding: 80px 20px;
+  padding: 100px 20px;
   background: linear-gradient(135deg, #0a0218, #1a0033, #0d0a1f);
   display: flex;
   justify-content: center;
 }
 
-/* CARD */
+/* ================= CARD ================= */
 .about-card {
   max-width: 900px;
   padding: 40px;
@@ -14,59 +14,87 @@
 
   background: linear-gradient(
     135deg,
-    rgba(255,255,255,0.05),
+    rgba(255,255,255,0.06),
     rgba(255,255,255,0.02)
   );
 
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255,255,255,0.1);
 
-  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  transition: all 0.4s ease;
+
+  /* Entry animation */
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
 }
 
+/* subtle glow layer */
+.about-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(124, 58, 237, 0.15),
+    transparent
+  );
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.about-card:hover::before {
+  opacity: 1;
+}
+
+/* Hover interaction */
 .about-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(124, 58, 237, 0.2);
+  transform: translateY(-10px) scale(1.01);
+  box-shadow: 0 25px 60px rgba(124, 58, 237, 0.25);
+  border-color: rgba(124, 58, 237, 0.3);
 }
 
-/* TITLE */
+/* ================= TITLE ================= */
 .section-title {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   font-weight: 700;
   margin-bottom: 15px;
   color: white;
 }
 
-/* SUBTITLE */
+/* ================= SUBTITLE ================= */
 .subtitle {
   color: #8b5cf6;
   font-weight: 600;
   margin-bottom: 20px;
 }
 
-/* TEXT */
+/* ================= TEXT ================= */
 .about-text {
   color: #cfcfcf;
   margin-bottom: 15px;
   line-height: 1.7;
 }
 
-/* HIGHLIGHT */
+/* Highlight words */
 .about-text span {
   color: #a78bfa;
   font-weight: 600;
 }
 
-/* DETAILS GRID */
+/* ================= DETAILS GRID ================= */
 .about-details {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px 30px;
+  gap: 14px 30px;
   margin: 25px 0;
   font-size: 0.95rem;
 }
 
-/* BUTTON */
+/* ================= BUTTON ================= */
 .download-btn {
   background: linear-gradient(45deg, #7c3aed, #6d28d9);
   border: none;
@@ -75,16 +103,51 @@
   border-radius: 30px;
   cursor: pointer;
   font-size: 1rem;
+
+  position: relative;
+  overflow: hidden;
+
   transition: all 0.3s ease;
 }
 
-/* BUTTON HOVER */
-.download-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(124, 58, 237, 0.6);
+/* glow ripple */
+.download-btn::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.4s;
 }
 
-/* RESPONSIVE */
+.download-btn:hover::after {
+  width: 200%;
+  height: 200%;
+}
+
+/* hover effect */
+.download-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(124, 58, 237, 0.7);
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
   .about-card {
     padding: 25px;

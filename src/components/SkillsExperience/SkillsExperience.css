@@ -1,55 +1,71 @@
-/* SECTION */
+/* ================= SECTION ================= */
 .skills-experience-container {
-  padding: 80px 20px;
+  padding: 100px 20px;
   background: linear-gradient(135deg, #0a0218 0%, #1a0033 50%, #0d0a1f 100%);
   text-align: center;
 }
 
-/* TITLE */
+/* ================= TITLE ================= */
 .skills-title {
   font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   color: white;
 }
 
-/* GRID */
+/* ================= GRID ================= */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 24px;
+  gap: 26px;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-/* CARD */
+/* ================= CARD ================= */
 .skill-card {
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.06),
     rgba(255, 255, 255, 0.02)
   );
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 16px;
-  padding: 20px;
+  padding: 22px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
 
   color: white;
   font-size: 0.95rem;
   font-weight: 500;
 
-  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+
+  transition: all 0.35s ease;
+
+  /* entry animation */
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
 }
 
-/* SHIMMER EFFECT (same as project cards) */
+/* ================= STAGGER ================= */
+.skill-card:nth-child(1) { animation-delay: 0.1s; }
+.skill-card:nth-child(2) { animation-delay: 0.2s; }
+.skill-card:nth-child(3) { animation-delay: 0.3s; }
+.skill-card:nth-child(4) { animation-delay: 0.4s; }
+.skill-card:nth-child(5) { animation-delay: 0.5s; }
+.skill-card:nth-child(6) { animation-delay: 0.6s; }
+.skill-card:nth-child(7) { animation-delay: 0.7s; }
+.skill-card:nth-child(8) { animation-delay: 0.8s; }
+.skill-card:nth-child(9) { animation-delay: 0.9s; }
+
+/* ================= SHIMMER ================= */
 .skill-card::before {
   content: '';
   position: absolute;
@@ -57,36 +73,82 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-  transition: 0.5s;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.15),
+    transparent
+  );
+  transition: 0.6s;
 }
 
 .skill-card:hover::before {
   left: 100%;
 }
 
-/* HOVER */
+/* ================= GLOW LAYER ================= */
+.skill-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(124, 58, 237, 0.15),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.skill-card:hover::after {
+  opacity: 1;
+}
+
+/* ================= HOVER ================= */
 .skill-card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 20px 40px rgba(124, 58, 237, 0.2);
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 25px 60px rgba(124, 58, 237, 0.3);
   border-color: rgba(124, 58, 237, 0.4);
 }
 
-/* ICON */
+/* ================= ICON ================= */
 .skill-icon {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   object-fit: contain;
+  transition: 0.3s ease;
 }
 
-/* TEXT */
+/* icon animation */
+.skill-card:hover .skill-icon {
+  transform: scale(1.15) rotate(3deg);
+}
+
+/* ================= TEXT ================= */
 .skill-card span {
   margin-top: 5px;
+  letter-spacing: 0.3px;
 }
 
-/* RESPONSIVE */
+/* ================= ANIMATION ================= */
+@keyframes fadeUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
   .skills-title {
     font-size: 2rem;
+  }
+
+  .skills-grid {
+    gap: 18px;
   }
 }
