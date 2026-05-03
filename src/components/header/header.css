@@ -11,6 +11,7 @@
   font-weight: bold;
   display: flex;
   align-items: center;
+   white-space: nowrap;   /* 🔥 THIS FIXES YOUR ISSUE */
 }
 
 .logo-text {
@@ -101,7 +102,7 @@
 
 /* ✅ Hide NAME on medium-small screens */
 @media (max-width: 600px) {
-  .logo-text {
+  .logo{
     display: none;
   }
 }
