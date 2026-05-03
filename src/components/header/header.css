@@ -1,6 +1,6 @@
 .navbar {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   padding: 10px 40px;
 }
@@ -11,11 +11,7 @@
   font-weight: bold;
   display: flex;
   align-items: center;
-   white-space: nowrap;   /* 🔥 THIS FIXES YOUR ISSUE */
-}
-
-.logo-text {
-  transition: 0.3s;
+  white-space: nowrap;
 }
 
 .dot {
@@ -24,6 +20,7 @@
 
 /* NAV LINKS */
 .nav-links {
+  justify-self: center;
   list-style: none;
   display: flex;
   gap: 45px;
@@ -32,10 +29,6 @@
   margin: 0;
   border: 1.7px solid white;
   border-radius: 40px;
-}
-
-.nav-links li {
-  cursor: pointer;
 }
 
 .nav-links li a {
@@ -67,7 +60,7 @@
 }
 
 /* ========================= */
-/* ✅ RESPONSIVE BREAKPOINTS */
+/* ✅ RESPONSIVE FIXES */
 /* ========================= */
 
 /* Tablets */
@@ -82,7 +75,7 @@
   }
 }
 
-/* Small tablets / large phones */
+/* Medium screens */
 @media (max-width: 768px) {
   .navbar {
     padding: 10px 15px;
@@ -100,14 +93,22 @@
   }
 }
 
-/* ✅ Hide NAME on medium-small screens */
+/* 🔥 FIXED PROPERLY */
 @media (max-width: 600px) {
-  .logo{
+  .navbar {
+    grid-template-columns: 1fr auto; /* remove logo column */
+  }
+
+  .logo {
     display: none;
+  }
+
+  .nav-links {
+    justify-self: center; /* stays perfectly centered */
   }
 }
 
-/* ✅ Hide CONTACT BUTTON on very small screens */
+/* Small screens */
 @media (max-width: 480px) {
   .contact-button {
     display: none;
@@ -120,7 +121,7 @@
   }
 }
 
-/* Optional: ultra small cleanup */
+/* Ultra small */
 @media (max-width: 360px) {
   .nav-links {
     gap: 5px;
