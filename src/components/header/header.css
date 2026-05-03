@@ -1,88 +1,128 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 40px;
-  }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .dot {
-    color: #ff4081;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 45px;
-    font-size: 1.1rem;
-    padding: 15px;
-    margin: 0;
-    border: 1.7px solid white;
-    border-radius: 40px;
-    -webkit-border-radius: 40px;
-    -moz-border-radius: 40px;
-    -ms-border-radius: 40px;
-    -o-border-radius: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
 }
-  
-  .nav-links li {
-    cursor: pointer;
-  }
-  .nav-links li a{
-    text-decoration: none;
-    color: white;
+
+/* LOGO */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  transition: 0.3s;
+}
+
+.dot {
+  color: #ff4081;
+}
+
+/* NAV LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 45px;
+  font-size: 1.1rem;
+  padding: 15px;
+  margin: 0;
+  border: 1.7px solid white;
+  border-radius: 40px;
+}
+
+.nav-links li {
+  cursor: pointer;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+}
+
+/* ACTIONS */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* BUTTON */
+.contact-button {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-button:hover {
+  background-color: #fff;
+  color: #0a0218;
+}
+
+/* ========================= */
+/* ✅ RESPONSIVE BREAKPOINTS */
+/* ========================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 10px 20px;
   }
 
-  .header-actions {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  .nav-links {
+    gap: 20px;
+    padding: 10px;
+  }
+}
+
+/* Small tablets / large phones */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .nav-links {
+    gap: 10px;
+    font-size: 0.9rem;
+    padding: 8px;
   }
 
   .contact-button {
-    background: transparent;
-    border: 1px solid #fff;
-    color: #fff;
-    padding: 8px 16px;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: 0.3s;
+    padding: 6px 12px;
+    font-size: 0.9rem;
   }
-  
-  .contact-button:hover {
-    background-color: #fff;
-    color: #0a0218;
+}
+
+/* ✅ Hide NAME on medium-small screens */
+@media (max-width: 600px) {
+  .logo-text {
+    display: none;
   }
+}
 
-  @media (max-width: 1024px) {
-    .navbar {
-      padding: 10px 20px;
-    }
-
-    .nav-links {
-      gap: 20px;
-      padding: 10px;
-    }
+/* ✅ Hide CONTACT BUTTON on very small screens */
+@media (max-width: 480px) {
+  .contact-button {
+    display: none;
   }
 
-  @media (max-width: 768px) {
-    .navbar {
-      padding: 10px 15px;
-    }
-
-    .nav-links {
-      gap: 10px;
-      font-size: 0.9rem;
-      padding: 8px;
-    }
-
-    .contact-button {
-      padding: 6px 12px;
-      font-size: 0.9rem;
-    }
+  .nav-links {
+    gap: 8px;
+    font-size: 0.8rem;
+    padding: 6px;
   }
-  
+}
+
+/* Optional: ultra small cleanup */
+@media (max-width: 360px) {
+  .nav-links {
+    gap: 5px;
+    font-size: 0.7rem;
+  }
+}
