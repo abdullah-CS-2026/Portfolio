@@ -19,10 +19,14 @@ export const HeroSection = ({ onContactClick }) => {
         </div>
 
         <h2>Hi! I'm <span className="highlight">Muhammad Abdullah</span> 👋</h2>
-        <h1>frontend web developer<br />based in London.</h1>
-        <p>
-          Aspiring Full Stack Developer with hands-on experience in MERN stack technologies. Proficient in React, Node.js, Express.js, and MongoDB, with a strong focus on building responsive and user-friendly web applications. Eager to contribute to innovative projects and drive professional growth in the technology and web development industry.
-        </p>
+
+<h1>Full Stack MERN Developer</h1>
+
+<p>
+I build fast, scalable, and user-focused web applications using the MERN stack (MongoDB, Express.js, React, Node.js). 
+From designing responsive frontends to developing secure backend APIs, I focus on writing clean code and solving real-world problems. 
+Currently, I’m sharpening my skills by building full-stack projects and preparing for professional development roles.
+</p>
 
         <div className="btns">
 
